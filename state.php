@@ -55,12 +55,12 @@
 
 <body onload="fetch();">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center">
-		<h1 class="navbar-brand line" href="#">INDIA'S COVID-19 LIVE STATS</h1>
+		<h1 class="navbar-brand line" href="#">COVID-19 LIVE STATS</h1>
 		<h6 style="color:#fff;">Developed by Aman05382</h6>
 	</nav>
 	<section class=" corona-update container-fluid">
 		<div class="mb-4">
-			<h2 class="text-center text-uppercase pt-3 pb-0">covid-19 live updates of India</h2>
+			<h2 class="text-center text-uppercase pt-3 pb-0">COVID-19 LIVE STATS-(India)</h2>
 		</div>
 		<!--All India-->
 		<div class="row text-center">
@@ -98,7 +98,7 @@
 		<!--SEARCH BOX-->
 		<div class="text-center">
 			<!--Search box-->
-			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for countries.." title="Search here">
+			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for States.." title="Search here">
 			<p>[Please avoid spaces after name]</p>
 			<div class="scrollLeft">
 				<p>Scroll left-></p>

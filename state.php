@@ -27,7 +27,6 @@
 
 		.line {
 			text-decoration: underline;
-
 		}
 
 		.search-box {
@@ -167,8 +166,6 @@
 
 			y.insertCell(5);
 			corona_table.rows[i].cells[5].innerHTML = state[i]['deaths'];
-
-
 		}
 
 		/*All India Data*/

@@ -65,32 +65,32 @@
 		<!--All India-->
 		<div class="row text-center">
 			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold pt-0">All over India</h5>
+				<h5 class="font-weight-bold pt-0">All Over India</h5>
 				<h3 class="count pb-2" id="AOI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/220px-Emblem_of_India.svg.png" id="India"></h3>
 			</div>
 
 			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Total confirmed</h5>
+				<h5 class="font-weight-bold">Total Confirmed</h5>
 				<h3 class="count pb-2" id="TC"></h3>
 			</div>
 
 			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Total active</h5>
+				<h5 class="font-weight-bold">Total Active</h5>
 				<h3 class="count pb-2" id="TA"></h3>
 			</div>
 
 			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Total recovered</h5>
+				<h5 class="font-weight-bold">Total Recovered</h5>
 				<h3 class="count pb-2" id="TR"></h3>
 			</div>
 
 			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Total deaths</h5>
+				<h5 class="font-weight-bold">Total Deaths</h5>
 				<h3 class="count pb-2" id="TD"></h3>
 			</div>
 
 			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Last update</h5>
+				<h5 class="font-weight-bold">Last Update</h5>
 				<h3 class="count pb-2" id="LU"></h3>
 			</div>
 		</div>
@@ -110,7 +110,7 @@
 				<tr>
 
 					<th>State</th>
-					<th>Last update</th>
+					<th>Last Update</th>
 					<th>Confirmed</th>
 					<th>Active</th>
 					<th>Recovered</th>

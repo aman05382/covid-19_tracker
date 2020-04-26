@@ -8,10 +8,11 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
     curl_setopt($ch, CURLOPT_URL, 'https://covid19.mathdro.id/api/countries/' . urlencode($_GET['country']));
     $result = curl_exec($ch);
     $data = json_decode($result, true);
+}
 ?>
-
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -66,7 +67,7 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
         <!--Search box-->
         <form class="form-group" method="get">
             <input name="country" class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for countries.." title="Search here">
-            <button type="submit" id="aman" class="btn btn-dark" >Search</button>
+            <button type="submit" id="aman" class="btn btn-dark">Search</button>
         </form>
     </div>
     <?php if (!empty($data['confirmed'])) : ?>
@@ -101,12 +102,13 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
         </section>
     <?php endif; ?>
     <hr>
-        <img class="fa fa-align-center" src='https://covid19.mathdro.id/api/og' height="500px" width="auto"/>
+    <img class="fa fa-align-center" src='https://covid19.mathdro.id/api/og' height="500px" width="auto" />
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
- </body>
- </html>
+</body>
+
+</html>

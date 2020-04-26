@@ -2,7 +2,6 @@
 <html>
 
 <head>
-	<!--https://api.covid19india.org/data.json-->
 	<title>CovidIndia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Latest compiled and minified CSS -->

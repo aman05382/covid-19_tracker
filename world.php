@@ -29,6 +29,7 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
             padding: 0;
             box-sizing: border-box;
             font-family: 'Muli', sans-serif;
+
         }
 
         .line {
@@ -47,6 +48,10 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
             .scrollLeft {
                 display: none;
             }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
@@ -76,13 +81,17 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
         <div class="mb-4">
             <h2 class="text-center text-uppercase pt-3 pb-0">Showing Statistics of <?php echo htmlspecialchars($_GET['country'], ENT_QUOTES); ?></h2>
         </div>
+
         <section class="container-fluid">
             <div class="row" style="text-align: center">
+            
+                <div class="col-lg-2 col-md-2 col-12"></div>
 
                 <div class="col-lg-2 col-md-2 col-12">
                     <h5 class="font-weight-bold">Total confirmed</h5>
                     <h3 class="count pb-2" id="TC"><?php echo number_format($data['confirmed']['value']) ?></h3>
                 </div>
+
 
                 <div class="col-lg-2 col-md-2 col-12">
                     <h5 class="font-weight-bold">Total recovered</h5>
@@ -103,7 +112,7 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
     <?php endif; ?>
     <hr>
     <div class="text-xs-center text-lg-center">
-    <img src='https://covid19.mathdro.id/api/og' height="500px" width="auto" />
+        <img src='https://covid19.mathdro.id/api/og' height="500px" width="auto" />
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

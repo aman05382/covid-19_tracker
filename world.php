@@ -102,8 +102,9 @@ if (isset($_GET['country']) && !empty($_GET['country'])) {
         </section>
     <?php endif; ?>
     <hr>
-    <img class="fa fa-align-center" src='https://covid19.mathdro.id/api/og' height="500px" width="auto" />
-
+    <div class="text-xs-center text-lg-center">
+    <img src='https://covid19.mathdro.id/api/og' height="500px" width="auto" />
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

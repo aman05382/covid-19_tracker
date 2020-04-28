@@ -50,72 +50,47 @@
 	</nav>
 	<section class=" corona-update container-fluid">
 		<div class="mb-4">
-			<h2 class="text-center text-uppercase pt-3 pb-0">COVID-19 LIVE STATS-(India)</h2>
+			<h2 class="text-center text-uppercase pt-3 pb-0">Essential Services Only For Indian Cities</h2>
 		</div>
 		<!--All India-->
 		<div class="row text-center">
 			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold pt-0">All Over World</h5>
-				<h3 class="count pb-2" id="AOI"><img src="https://cdn4.iconfinder.com/data/icons/business-finance-vol-12-2/512/5-512.png" id="India"></h3>
-			</div>
-			
-			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">New Confirmed</h5>
-				<h3 class="count pb-2" id="TC"></h3>
-			</div>
-
-			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Total Confirmed</h5>
-				<h3 class="count pb-2" id="TA"></h3>
-			</div>
-
-			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Total Recovered</h5>
-				<h3 class="count pb-2" id="TR"></h3>
-			</div>
-
-			<div class="col-lg-2 col-md-2 col-12">
-				<h5 class="font-weight-bold">Total Deaths</h5>
-				<h3 class="count pb-2" id="TD"></h3>
+				<h5 class="font-weight-bold pt-0">All Over India</h5>
+				<h3 class="count pb-2" id="AOI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/220px-Emblem_of_India.svg.png" id="India"></h3>
 			</div>
 		</div>
 
 		<!--SEARCH BOX-->
 		<div class="text-center">
 			<!--Search box-->
-			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for States.." title="Search here">
+			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Cities.." title="Search here">
 			<p>[Please avoid spaces after name]</p>
-			<div class="scrollLeft">
-				<p>Scroll left-></p>
-			</div>
 		</div>
 		<!--TABLE HEADING-->
 		<div class="text-center table-responsive">
 			<table class="table table-bordered table-striped table-dark" id="corona_table">
 				<tr>
 
-					<th>Countries</th>
-					<th>Country Code</th>
-					<th>Date</th>
-					<th>Active</th>
-					<th>Recovered</th>
-					<th>Deaths</th>
+					<th>City</th>
+					<th>category</th>
+					<th>contact</th>
+					<th>organisation</th>
+					<th>description</th>
 				</tr>
 			</table>
 		</div>
 	</section>
-	<!--Access the data statewise from API-->
+	<!--Access the data Essential Service from API-->
 	<?php
-	
-	$x = 'https://api.covid19api.com/summary';
+	$x = 'https://api.covid19india.org/resources/resources.json';
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $x);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	$content = curl_exec($ch);
 	curl_close($ch);
 	$json = json_decode($content, true); //decode it using json
-	$global= $json['Global'];
-    $state = $json["Countries"];
+	$state = $json['resources']; 
+
 	?>
 	<script type="text/javascript">
 		var corona_table = document.getElementById('corona_table'); //take table
@@ -126,31 +101,20 @@
 			var y = corona_table.insertRow(); //row insert
 			//Data insertion
 			y.insertCell(0);
-			corona_table.rows[i].cells[0].innerHTML = state[i]['Country'];
+			corona_table.rows[i].cells[0].innerHTML = state[i]['city'];
 
 			y.insertCell(1);
-			corona_table.rows[i].cells[1].innerHTML = state[i]['CountryCode'];
+			corona_table.rows[i].cells[1].innerHTML = state[i]['category'];
 
 			y.insertCell(2);
-			corona_table.rows[i].cells[2].innerHTML = state[i]['Date'];
+			corona_table.rows[i].cells[2].innerHTML = state[i]['phonenumber'];
 
 			y.insertCell(3);
-			corona_table.rows[i].cells[3].innerHTML = state[i]['TotalConfirmed'];
+			corona_table.rows[i].cells[3].innerHTML = state[i]['nameoftheorganisation'];
 
 			y.insertCell(4);
-			corona_table.rows[i].cells[4].innerHTML = state[i]['TotalRecovered'];
-
-			y.insertCell(5);
-			corona_table.rows[i].cells[5].innerHTML = state[i]['TotalDeaths'];
+			corona_table.rows[i].cells[4].innerHTML = state[i]['descriptionandorserviceprovided'];
 		}
-	</script>
-	<script>
-		/*All India Data*/
-		var global1 = <?php echo json_encode($global); ?>;
-		document.getElementById('TC').innerHTML = global1.NewConfirmed;
-		document.getElementById('TA').innerHTML = global1.TotalConfirmed;
-		document.getElementById('TR').innerHTML = global1.TotalRecovered;
-		document.getElementById('TD').innerHTML = global1.TotalDeaths;
 	</script>
 	<script>
 		/*For search box*/

@@ -88,7 +88,7 @@
         <!--SEARCH BOX-->
 		<div class="text-center">
 			<!--Search box-->
-			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for States.." title="Search here">
+			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Districts.." title="Search here">
 			<p>[Please avoid spaces after name]</p>
 			<div class="scrollLeft">
 				<p>Scroll left-></p>
@@ -99,8 +99,8 @@
             <table class="table table-bordered table-striped table-dark" id="corona_table">
                 <tr>
 
-                    <th>State</th>
-                    <th>Last Update</th>
+                    <th>District</th>
+                    <!-- <th>Last Update</th> -->
                     <th>Confirmed</th>
                     <th>Active</th>
                     <th>Recovered</th>
@@ -119,17 +119,19 @@
     // // print_r($state);
 
     //HERE IS THE ALTERNATIVE OF ABOVE WORK
-    $x = 'https://api.covid19india.org/state_district_wise.json';
+    // $x = 'https://api.covid19india.org/state_district_wise.json';
+    $x = 'https://api.covid19india.org/v2/state_district_wise.json';
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $x);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $content = curl_exec($ch);
     curl_close($ch);
     $json = json_decode($content, true); //decode it using json
-    $state = $json['Assam']; //state data -->
+    // $state = $json['Assam']; //state data -->
     // echo "<pre>";
-    //    print_r($state);
-
+    // print_r($state);
+    // print_r($json);
+    $state = $json;
     ?>
     <script type="text/javascript">
         var corona_table = document.getElementById('corona_table'); //take table
@@ -141,22 +143,22 @@
             var y = corona_table.insertRow(); //row insert
             //Data insertion
             y.insertCell(0);
-            corona_table.rows[i].cells[0].innerHTML = state[i]['state'];
+            corona_table.rows[i].cells[0].innerHTML = state[i]['districtData'][i]['district'];
+
+            // y.insertCell(1);
+            // corona_table.rows[i].cells[1].innerHTML = state[i]['districtData'][i]['lastupdatedtime'];
 
             y.insertCell(1);
-            corona_table.rows[i].cells[1].innerHTML = state[i]['lastupdatedtime'];
+            corona_table.rows[i].cells[1].innerHTML = state[i]['districtData'][i]['confirmed'];
 
             y.insertCell(2);
-            corona_table.rows[i].cells[2].innerHTML = state[i]['confirmed'];
+            corona_table.rows[i].cells[2].innerHTML = state[i]['districtData'][i]['active'];
 
             y.insertCell(3);
-            corona_table.rows[i].cells[3].innerHTML = state[i]['active'];
+            corona_table.rows[i].cells[3].innerHTML = state[i]['districtData'][i]['recovered'];
 
             y.insertCell(4);
-            corona_table.rows[i].cells[4].innerHTML = state[i]['recovered'];
-
-            y.insertCell(5);
-            corona_table.rows[i].cells[5].innerHTML = state[i]['deaths'];
+            corona_table.rows[i].cells[4].innerHTML = state[i]['districtData'][i]['deceased'];
         }
 
         /*All India Data*/

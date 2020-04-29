@@ -128,8 +128,8 @@
 	$json = json_decode($content, true); //decode it using json
 	$state = $json['statewise']; //state data -->
 	// echo "<pre>";
-	//    print_r($state);
-
+	// print_r($state);
+	print_r($json)
 	?>
 	<script type="text/javascript">
 		var corona_table = document.getElementById('corona_table'); //take table

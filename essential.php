@@ -72,10 +72,10 @@
 				<tr>
 
 					<th>City</th>
-					<th>category</th>
-					<th>contact</th>
-					<th>organisation</th>
-					<th>description</th>
+					<th>Category</th>
+					<th>Contact</th>
+					<th>Organisation</th>
+					<th>Description</th>
 				</tr>
 			</table>
 		</div>

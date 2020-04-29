@@ -139,26 +139,29 @@
         var state = <?php echo json_encode($state); ?>;
         console.log(state)
         for (i = 1; i < (state.length); i++) {
+            districtData = state[i]['districtData'];
+            for(j = 1; j< (districtData.length); j++) {
 
             var y = corona_table.insertRow(); //row insert
             //Data insertion
             y.insertCell(0);
-            corona_table.rows[i].cells[0].innerHTML = state[i]['districtData'][i]['district'];
+            corona_table.rows[i].cells[0].innerHTML = state[i]['districtData'][j]['district'];
 
             // y.insertCell(1);
             // corona_table.rows[i].cells[1].innerHTML = state[i]['districtData'][i]['lastupdatedtime'];
 
             y.insertCell(1);
-            corona_table.rows[i].cells[1].innerHTML = state[i]['districtData'][i]['confirmed'];
+            corona_table.rows[i].cells[1].innerHTML = state[i]['districtData'][j]['confirmed'];
 
             y.insertCell(2);
-            corona_table.rows[i].cells[2].innerHTML = state[i]['districtData'][i]['active'];
+            corona_table.rows[i].cells[2].innerHTML = state[i]['districtData'][j]['active'];
 
             y.insertCell(3);
-            corona_table.rows[i].cells[3].innerHTML = state[i]['districtData'][i]['recovered'];
+            corona_table.rows[i].cells[3].innerHTML = state[i]['districtData'][j]['recovered'];
 
             y.insertCell(4);
-            corona_table.rows[i].cells[4].innerHTML = state[i]['districtData'][i]['deceased'];
+            corona_table.rows[i].cells[4].innerHTML = state[i]['districtData'][j]['deceased'];
+            }
         }
 
         /*All India Data*/

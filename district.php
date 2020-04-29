@@ -86,11 +86,14 @@
         </div>
 
         <!--SEARCH BOX-->
-        <div class="text-center">
-            <!--Search box-->
-            <select class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" id="myInput" name="locality" placeholder="Search for States.." title="Search here"></select>
-                <p>[Please avoid spaces after name]</p>
-        </div>
+		<div class="text-center">
+			<!--Search box-->
+			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for States.." title="Search here">
+			<p>[Please avoid spaces after name]</p>
+			<div class="scrollLeft">
+				<p>Scroll left-></p>
+			</div>
+		</div>
         <!--TABLE HEADING-->
         <div class="text-center table-responsive">
             <table class="table table-bordered table-striped table-dark" id="corona_table">
@@ -132,6 +135,7 @@
         var corona_table = document.getElementById('corona_table'); //take table
         /*Passing php states array to  javascript variable*/
         var state = <?php echo json_encode($state); ?>;
+        console.log(state)
         for (i = 1; i < (state.length); i++) {
 
             var y = corona_table.insertRow(); //row insert

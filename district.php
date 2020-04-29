@@ -165,11 +165,11 @@
         }
 
         /*All India Data*/
-        document.getElementById('TC').innerHTML = state[0]['confirmed'];
-        document.getElementById('TA').innerHTML = state[0]['active'];
-        document.getElementById('TR').innerHTML = state[0]['recovered'];
-        document.getElementById('TD').innerHTML = state[0]['deaths'];
-        document.getElementById('LU').innerHTML = state[0]['lastupdatedtime'];
+        document.getElementById('TC').innerHTML = india[0]['confirmed'];
+        document.getElementById('TA').innerHTML = india[0]['active'];
+        document.getElementById('TR').innerHTML = india[0]['recovered'];
+        document.getElementById('TD').innerHTML = india[0]['deaths'];
+        document.getElementById('LU').innerHTML = india[0]['lastupdatedtime'];
     </script>
     <script>
         /*For search box*/

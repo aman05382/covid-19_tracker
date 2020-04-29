@@ -129,7 +129,7 @@
 	$state = $json['statewise']; //state data -->
 	// echo "<pre>";
 	// print_r($state);
-	print_r($json)
+	// print_r($json)
 	?>
 	<script type="text/javascript">
 		var corona_table = document.getElementById('corona_table'); //take table

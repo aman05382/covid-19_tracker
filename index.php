@@ -19,7 +19,6 @@
             .scrollLeft {
 
                 display: none;
-
             }
         }
     </style>

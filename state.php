@@ -14,7 +14,7 @@
 			box-sizing: border-box;
 			font-family: 'Muli', sans-serif;
 		}
-
+ 
 		.line {
 			text-decoration: underline;
 		}
@@ -44,37 +44,34 @@
 </head>
 
 <body onload="fetch();">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center">
-		<h1 class="navbar-brand line" href="#">COVID-19 LIVE STATS</h1>
-		<h6 style="color:#fff;">Developed by Aman05382</h6>
-	</nav>
+<?php include('navbar.html');  ?>
 	<section class=" corona-update container-fluid">
 		<div class="mb-4">
 			<h2 class="text-center text-uppercase pt-3 pb-0">COVID-19 LIVE STATS-(India)</h2>
 		</div>
 		<!--All India-->
 		<div class="row text-center">
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-dark">
 				<h5 class="font-weight-bold pt-0">All Over India</h5>
 				<h3 class="count pb-2" id="AOI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/220px-Emblem_of_India.svg.png" id="India"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-info">
 				<h5 class="font-weight-bold">Total Confirmed</h5>
 				<h3 class="count pb-2" id="TC"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-warning">
 				<h5 class="font-weight-bold">Total Active</h5>
 				<h3 class="count pb-2" id="TA"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-success">
 				<h5 class="font-weight-bold">Total Recovered</h5>
 				<h3 class="count pb-2" id="TR"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-danger">
 				<h5 class="font-weight-bold">Total Deaths</h5>
 				<h3 class="count pb-2" id="TD"></h3>
 			</div>
@@ -186,6 +183,7 @@
 			}
 		}
 	</script>
+	<?php include('footer.html');  ?>
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 

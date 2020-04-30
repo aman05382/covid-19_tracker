@@ -44,17 +44,14 @@
 </head>
 
 <body onload="fetch();">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center">
-		<h1 class="navbar-brand line" href="#">COVID-19 LIVE STATS</h1>
-		<h6 style="color:#fff;">Developed by Aman05382</h6>
-	</nav>
+<?php include('navbar.html');  ?>
 	<section class=" corona-update container-fluid">
 		<div class="mb-4">
 			<h2 class="text-center text-uppercase pt-3 pb-0">Essential Services Only For Indian Cities</h2>
 		</div>
 		<!--All India-->
 		<div class="row text-center">
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-12 text-info">
 				<h5 class="font-weight-bold pt-0">All Over India</h5>
 				<h3 class="count pb-2" id="AOI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/220px-Emblem_of_India.svg.png" id="India"></h3>
 			</div>
@@ -137,6 +134,7 @@
 			}
 		}
 	</script>
+	<?php include('footer.html');  ?>
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 

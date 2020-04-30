@@ -2,203 +2,156 @@
 <html>
 
 <head>
-    <title>CovidIndia</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Muli', sans-serif;
-        }
+	<title>CovidIndia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Muli', sans-serif;
+		}
 
-        .line {
-            text-decoration: underline;
-        }
+		.line {
+			text-decoration: underline;
+		}
 
-        .search-box {
-            border: solid #343A40 2px;
+		.search-box {
+			border: solid #343A40 2px;
 
-        }
+		}
 
-        #India {
-            width: 25px;
+		#India {
+			width: 25px;
 
-        }
+		}
 
-        .corona-update h5 {
-            text-decoration: underline;
-        }
+		.corona-update h5 {
+			text-decoration: underline;
+		}
 
-        @media only screen and (min-width: 480px) {
-            .scrollLeft {
+		@media only screen and (min-width: 480px) {
+			.scrollLeft {
 
-                display: none;
+				display: none;
 
-            }
-        }
-    </style>
+			}
+		}
+	</style>
 </head>
 
-<body onload="fetch();">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center">
-        <h1 class="navbar-brand line" href="#">COVID-19 LIVE STATS</h1>
-        <h6 style="color:#fff;">Developed by Aman05382</h6>
-    </nav>
-    <section class=" corona-update container-fluid">
-        <div class="mb-4">
-            <h2 class="text-center text-uppercase pt-3 pb-0">COVID-19 LIVE STATS-(India)</h2>
-        </div>
-        <!--All India-->
-        <div class="row text-center">
-            <div class="col-lg-2 col-md-2 col-12">
-                <h5 class="font-weight-bold pt-0">All Over India</h5>
-                <h3 class="count pb-2" id="AOI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/220px-Emblem_of_India.svg.png" id="India"></h3>
-            </div>
+<body>
+<?php include('navbar.html');  ?>
+	<section class=" corona-update container-fluid">
+		<div class="mb-4">
+			<h2 class="text-center text-uppercase pt-3 pb-0">COVID-19 LIVE STATS-(India)</h2>
+		</div>
 
-            <div class="col-lg-2 col-md-2 col-12">
-                <h5 class="font-weight-bold">Total Confirmed</h5>
-                <h3 class="count pb-2" id="TC"></h3>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-12">
-                <h5 class="font-weight-bold">Total Active</h5>
-                <h3 class="count pb-2" id="TA"></h3>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-12">
-                <h5 class="font-weight-bold">Total Recovered</h5>
-                <h3 class="count pb-2" id="TR"></h3>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-12">
-                <h5 class="font-weight-bold">Total Deaths</h5>
-                <h3 class="count pb-2" id="TD"></h3>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-12">
-                <h5 class="font-weight-bold">Last Update</h5>
-                <h3 class="count pb-2" id="LU"></h3>
-            </div>
-        </div>
-
-        <!--SEARCH BOX-->
+		<!--SEARCH BOX-->
 		<div class="text-center">
 			<!--Search box-->
-			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Districts.." title="Search here">
+			<!-- <input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Districts.." title="Search here"> -->
+			<form class="form-group" method="GET">
+				<select onchange="this.form.submit();" name="state" id="myInput" required class="text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box">
+					<option value="">Select State</option>
+					<option value="Andhra Pradesh">Andhra Pradesh</option>
+					<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+					<option value="Assam">Assam</option>
+					<option value="Bihar">Bihar</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Chhattisgarh">Chhattisgarh</option>
+					<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+					<option value="Daman and Diu">Daman and Diu</option>
+					<option value="Delhi">Delhi</option>
+					<option value="Lakshadweep">Lakshadweep</option>
+					<option value="Puducherry">Puducherry</option>
+					<option value="Goa">Goa</option>
+					<option value="Gujarat">Gujarat</option>
+					<option value="Haryana">Haryana</option>
+					<option value="Himachal Pradesh">Himachal Pradesh</option>
+					<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+					<option value="Jharkhand">Jharkhand</option>
+					<option value="Karnataka">Karnataka</option>
+					<option value="Kerala">Kerala</option>
+					<option value="Madhya Pradesh">Madhya Pradesh</option>
+					<option value="Maharashtra">Maharashtra</option>
+					<option value="Manipur">Manipur</option>
+					<option value="Meghalaya">Meghalaya</option>
+					<option value="Mizoram">Mizoram</option>
+					<option value="Nagaland">Nagaland</option>
+					<option value="Odisha">Odisha</option>
+					<option value="Punjab">Punjab</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Sikkim">Sikkim</option>
+					<option value="Tamil Nadu">Tamil Nadu</option>
+					<option value="Telangana">Telangana</option>
+					<option value="Tripura">Tripura</option>
+					<option value="Uttar Pradesh">Uttar Pradesh</option>
+					<option value="Uttarakhand">Uttarakhand</option>
+					<option value="West Bengal">West Bengal</option>
+				</select>
+			</form>
 			<p>[Please avoid spaces after name]</p>
-			<div class="scrollLeft">
-				<p>Scroll left-></p>
-			</div>
 		</div>
-        <!--TABLE HEADING-->
-        <div class="text-center table-responsive">
-            <table class="table table-bordered table-striped table-dark" id="corona_table">
-                <tr>
+	</section>
+	<!--Access the data statewise from API-->
+	<?php
+	$x = 'https://api.covid19india.org/v2/state_district_wise.json';
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $x);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	$districtdata = curl_exec($ch);
+	curl_close($ch);
+	$disdata = json_decode($districtdata, true); //decode it using json
+	if (isset($_GET['state'])) {
+		$ok = $_GET['state'];
+		$output = '';
+		$output .= '<section class=" corona-update container-fluid">
+		         <div class="text-center table-responsive">
+				<table class="table table-bordered table-striped table-dark" id="corona_table">
+					<tr>
+						<th scope="col">District</th>
+						<th scope="col">Confirmed</th>
+						<th scope="col">Active</th>
+						<th scope="col">Recovered</th>
+						<th scope="col">Death</th>
+					</tr>
+				<tbody>';
+		foreach ($disdata as $key => $value) {
+			if ($value['state'] == $ok) {
+				//echo $state;
+				for ($i = 0; $i < count($value['districtData']); $i++) {
+					$output .= '<tr>
+					<th>' . $value['districtData'][$i]['district'] . '</th>
+					<td>' . $value['districtData'][$i]['confirmed'] . '</td>
+					<td>' . $value['districtData'][$i]['active'] . '</td>
+					<td>' . $value['districtData'][$i]['recovered'] . '</td>
+					<td>' . $value['districtData'][$i]['deceased'] . '</td>
+				</tr>';
+					//print_r($value['districtData'][$i]['district']);
+				}
+				break;
+			}
+		}
+		$output .= '</tbody></table></div></section>';
+		echo $output;
+	} 
 
-                    <th>District</th>
-                    <!-- <th>Last Update</th> -->
-                    <th>Confirmed</th>
-                    <th>Active</th>
-                    <th>Recovered</th>
-                    <th>Deaths</th>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <!--Access the data statewise from API-->
-    <?php
-    //this method is working on localhost and not on live web
-    // $x=file_get_contents('https://api.covid19india.org/data.json');
-    // $json=json_decode($x,true);//decode it using json
-    // $state=$json['statewise'];//state data
-    // // echo "<pre>";
-    // // print_r($state);
+	?>
+	<?php include('footer.html');  ?>
 
-    //HERE IS THE ALTERNATIVE OF ABOVE WORK
-    // $x = 'https://api.covid19india.org/state_district_wise.json';
-    $x = 'https://api.covid19india.org/v2/state_district_wise.json';
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $x);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    $content = curl_exec($ch);
-    curl_close($ch);
-    $json = json_decode($content, true); //decode it using json
-    // $state = $json['Assam']; //state data -->
-    // echo "<pre>";
-    // print_r($state);
-    // print_r($json);
-    $state = $json;
-    ?>
-    <script type="text/javascript">
-        var corona_table = document.getElementById('corona_table'); //take table
-        /*Passing php states array to  javascript variable*/
-        var state = <?php echo json_encode($state); ?>;
-        console.log(state)
-        for (i = 1; i < (state.length); i++) {
-            districtData = state[i]['districtData'];
-            for(j = 1; j< (districtData.length); j++) {
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-            var y = corona_table.insertRow(); //row insert
-            //Data insertion
-            y.insertCell(0);
-            corona_table.rows[i].cells[0].innerHTML = state[i]['districtData'][j]['district'];
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-            // y.insertCell(1);
-            // corona_table.rows[i].cells[1].innerHTML = state[i]['districtData'][i]['lastupdatedtime'];
-
-            y.insertCell(1);
-            corona_table.rows[i].cells[1].innerHTML = state[i]['districtData'][j]['confirmed'];
-
-            y.insertCell(2);
-            corona_table.rows[i].cells[2].innerHTML = state[i]['districtData'][j]['active'];
-
-            y.insertCell(3);
-            corona_table.rows[i].cells[3].innerHTML = state[i]['districtData'][j]['recovered'];
-
-            y.insertCell(4);
-            corona_table.rows[i].cells[4].innerHTML = state[i]['districtData'][j]['deceased'];
-            }
-        }
-
-        /*All India Data*/
-        document.getElementById('TC').innerHTML = india[0]['confirmed'];
-        document.getElementById('TA').innerHTML = india[0]['active'];
-        document.getElementById('TR').innerHTML = india[0]['recovered'];
-        document.getElementById('TD').innerHTML = india[0]['deaths'];
-        document.getElementById('LU').innerHTML = india[0]['lastupdatedtime'];
-    </script>
-    <script>
-        /*For search box*/
-        function myFunction() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("corona_table");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

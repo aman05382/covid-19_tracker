@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>CovidIndia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,37 +43,34 @@
 </head>
 
 <body onload="fetch();">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center">
-		<h1 class="navbar-brand line" href="#">COVID-19 LIVE STATS</h1>
-		<h6 style="color:#fff;">Developed by Aman05382</h6>
-	</nav>
+<?php include('navbar.html');?>
 	<section class=" corona-update container-fluid">
 		<div class="mb-4">
-			<h2 class="text-center text-uppercase pt-3 pb-0">COVID-19 LIVE STATS-(India)</h2>
+			<h2 class="text-center text-uppercase pt-3 pb-0">COVID-19 LIVE STATS-(Global)</h2>
 		</div>
 		<!--All India-->
 		<div class="row text-center">
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-dark">
 				<h5 class="font-weight-bold pt-0">All Over World</h5>
 				<h3 class="count pb-2" id="AOI"><img src="https://cdn4.iconfinder.com/data/icons/business-finance-vol-12-2/512/5-512.png" id="India"></h3>
 			</div>
 			
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-3 text-info">
 				<h5 class="font-weight-bold">New Confirmed</h5>
 				<h3 class="count pb-2" id="TC"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-warning">
 				<h5 class="font-weight-bold">Total Confirmed</h5>
 				<h3 class="count pb-2" id="TA"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-3 text-success">
 				<h5 class="font-weight-bold">Total Recovered</h5>
 				<h3 class="count pb-2" id="TR"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-2 text-danger">
 				<h5 class="font-weight-bold">Total Deaths</h5>
 				<h3 class="count pb-2" id="TD"></h3>
 			</div>
@@ -83,7 +79,7 @@
 		<!--SEARCH BOX-->
 		<div class="text-center">
 			<!--Search box-->
-			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for States.." title="Search here">
+			<input class=" text-center mb-3 pl-5 pr-5 pt-2 pb-2 search-box" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Countries.." title="Search here">
 			<p>[Please avoid spaces after name]</p>
 			<div class="scrollLeft">
 				<p>Scroll left-></p>
@@ -173,6 +169,7 @@
 			}
 		}
 	</script>
+	<?php include('footer.html');  ?>
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 

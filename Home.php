@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CovidIndia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Muli', sans-serif;
+        }
+
+        .line {
+            text-decoration: underline;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .scrollLeft {
+
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <?php include('navbar.html'); ?>
+    <section class=" corona-update container-fluid">
+        <div class="mb-4">
+            <h2 class="text-center text-uppercase pt-3 pb-0">Main Dashboard</h2>
+        </div>
+    </section>
+<!-- TABLE: LATEST ORDERS -->
+<div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Latest Orders</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="table-responsive">
+                <table class="table no-margin">
+                  <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Item</th>
+                    <th>Status</th>
+                    <th>Popularity</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                    <td>Call of Duty IV</td>
+                    <td><span class="label label-success">Shipped</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                    <td>Samsung Smart TV</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                    <td>iPhone 6 Plus</td>
+                    <td><span class="label label-danger">Delivered</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                    <td>Samsung Smart TV</td>
+                    <td><span class="label label-info">Processing</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                    <td>Samsung Smart TV</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                    <td>iPhone 6 Plus</td>
+                    <td><span class="label label-danger">Delivered</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                    <td>Call of Duty IV</td>
+                    <td><span class="label label-success">Shipped</span></td>
+                    <td>
+                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.table-responsive -->
+            </div>
+    <?php include('footer.html');  ?>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

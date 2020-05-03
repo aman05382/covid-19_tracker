@@ -51,32 +51,32 @@
 		</div>
 		<!--All India-->
 		<div class="row text-center">
-			<div class="col-2 text-dark">
+			<div class="col-md text-dark">
 				<h5 class="font-weight-bold pt-0">All Over India</h5>
 				<h3 class="count pb-2" id="AOI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/220px-Emblem_of_India.svg.png" id="India"></h3>
 			</div>
 
-			<div class="col-2 text-info">
+			<div class="col-md text-info">
 				<h5 class="font-weight-bold">Total Confirmed</h5>
 				<h3 class="count pb-2" id="TC"></h3>
 			</div>
 
-			<div class="col-2 text-warning">
+			<div class="col-md text-warning">
 				<h5 class="font-weight-bold">Total Active</h5>
 				<h3 class="count pb-2" id="TA"></h3>
 			</div>
 
-			<div class="col-2 text-success">
+			<div class="col-md text-success">
 				<h5 class="font-weight-bold">Total Recovered</h5>
 				<h3 class="count pb-2" id="TR"></h3>
 			</div>
 
-			<div class="col-2 text-danger">
+			<div class="col-md text-danger">
 				<h5 class="font-weight-bold">Total Deaths</h5>
 				<h3 class="count pb-2" id="TD"></h3>
 			</div>
 
-			<div class="col-lg-2 col-md-2 col-12">
+			<div class="col-md col-md-2 col-12">
 				<h5 class="font-weight-bold">Last Update</h5>
 				<h3 class="count pb-2" id="LU"></h3>
 			</div>

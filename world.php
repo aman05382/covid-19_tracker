@@ -50,27 +50,27 @@
 		</div>
 		<!--All India-->
 		<div class="row text-center">
-			<div class="col-2 text-dark">
+			<div class="col-md text-dark">
 				<h5 class="font-weight-bold pt-0">All Over World</h5>
 				<h3 class="count pb-2" id="AOI"><img src="https://cdn4.iconfinder.com/data/icons/business-finance-vol-12-2/512/5-512.png" id="India"></h3>
 			</div>
 			
-			<div class="col-3 text-info">
+			<div class="col-md text-info">
 				<h5 class="font-weight-bold">New Confirmed</h5>
 				<h3 class="count pb-2" id="TC"></h3>
 			</div>
 
-			<div class="col-2 text-warning">
+			<div class="col-md text-warning">
 				<h5 class="font-weight-bold">Total Confirmed</h5>
 				<h3 class="count pb-2" id="TA"></h3>
 			</div>
 
-			<div class="col-3 text-success">
+			<div class="col-md text-success">
 				<h5 class="font-weight-bold">Total Recovered</h5>
 				<h3 class="count pb-2" id="TR"></h3>
 			</div>
 
-			<div class="col-2 text-danger">
+			<div class="col-md text-danger">
 				<h5 class="font-weight-bold">Total Deaths</h5>
 				<h3 class="count pb-2" id="TD"></h3>
 			</div>

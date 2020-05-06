@@ -93,7 +93,7 @@
 		var corona_table = document.getElementById('corona_table'); //take table
 		/*Passing php states array to  javascript variable*/
 		var state = <?php echo json_encode($state); ?>;
-		for (i = 1; i < (state.length); i++) {
+		for (i = 0; i < (state.length); i++) {
 
 			var y = corona_table.insertRow(); //row insert
 			//Data insertion
